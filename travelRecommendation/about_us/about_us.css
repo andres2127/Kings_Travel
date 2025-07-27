@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  color: #ffffff;
+  line-height: 1.7;
+}
+
+.aboutContainer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 115px;
+  flex-wrap: wrap; /* para que se apilen en móvil */
+}
+
+.aboutOurContent,
+.aboutOurTeam {
+  flex: 1 1 400px; /* crece y ocupa como mínimo 400px */
+  background-color: rgba(0, 38, 77, 0.6);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2); /* Sombra sutil oscura */
+  animation: fadeIn 1s ease-in;
+  max-width: 600px;
+}
+
+/* Títulos */
+.aboutOurContent h1,
+.aboutOurTeam h1 {
+  text-align: center;
+  font-size: 32px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+/* Títulos de miembros */
+.aboutOurTeam h3 {
+  margin-top: 25px;
+  margin-bottom: 10px;
+  background-color: #81d4fa;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 10px;
+  border-radius: 15px;
+
+}
+
+.aboutOurContent p,
+.aboutOurTeam p {
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+
+/* Lista de destinos */
+.aboutOurContent ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.aboutOurContent ul li {
+  margin-bottom: 8px;
+  list-style-type: "🌍 ";
+  font-size: 16px;
+}
+
+/* Animación */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive (móvil o pantallas pequeñas) */
+@media (max-width: 900px) {
+  .aboutContainer {
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+
+  .aboutOurContent,
+  .aboutOurTeam {
+    max-width: 100%;
+  }
+}
+

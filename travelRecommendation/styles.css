@@ -1,0 +1,88 @@
+/* Imagen de fondo */
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("../travelRecommendation/Images/Imagen\ de\ fondo.png"); /* Ajusta ruta si es necesario */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+.overlay {
+  background-color: rgba(0, 0, 0, 0.3); /* Capa oscura */
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+}
+
+/* NAV como barra superior */
+nav {
+  position: fixed;
+  top: 0;
+  width: 96%;
+  background-color: rgba(0, 38, 77, 0.9);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px 40px;
+  z-index: 1000;
+}
+
+.menu ul {
+  display: flex;
+  gap: 70px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Enlaces */
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px 10px;
+}
+
+nav a:hover {
+  background-color: #3485d5;
+  border-radius: 4px;
+}
+
+/* Contenedor circular */
+.search  {
+  background-color: #ffffff;
+  border-radius: 13px;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Input */
+nav input[type="text"] {
+  padding: 7px;
+  border: none;
+  border-radius: 13px;
+  width: 250px;
+}
+
+/* Botones */
+nav button {
+  padding: 7px 12px;
+  border: none;
+  border-radius: 13px;
+  background-color: #0077cc;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+nav button:hover {
+  background-color: #3485d5;
+}
