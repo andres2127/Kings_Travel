@@ -2,13 +2,14 @@
 body {
   margin: 0;
   padding: 0;
-  background-image: url("../travelRecommendation/Images/Imagen\ de\ fondo.png"); /* Ajusta ruta si es necesario */
+  background-image: url("../travelRecommendation/Images/Imagen\ de\ fondo.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   min-height: 100vh;
   font-family: Arial, sans-serif;
 }
+
 .overlay {
   background-color: rgba(0, 0, 0, 0.3); /* Capa oscura */
   position: fixed;
@@ -67,7 +68,7 @@ nav a:hover {
 
 /* Input */
 nav input[type="text"] {
-  padding: 7px;
+  padding: 5px;
   border: none;
   border-radius: 13px;
   width: 250px;
@@ -85,4 +86,15 @@ nav button {
 
 nav button:hover {
   background-color: #3485d5;
+}
+@media (max-width: 900px) {
+  .aboutContainer {
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+
+  .aboutOurContent,
+  .aboutOurTeam {
+    max-width: 100%;
+  }
 }

@@ -6,7 +6,7 @@
 
     if (currentScroll > lastScrollTop) {
       // Scrolling down
-      nav.style.top = "-100px"; // Oculta el nav (ajusta según tu altura)
+      nav.style.top = "-70px"; // Oculta el nav (ajusta según tu altura)
     } else {
       // Scrolling up
       nav.style.top = "0";
