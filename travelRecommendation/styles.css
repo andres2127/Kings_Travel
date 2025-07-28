@@ -10,8 +10,9 @@ body {
   font-family: Arial, sans-serif;
 }
 
+/* Capa oscura */
 .overlay {
-  background-color: rgba(0, 0, 0, 0.3); /* Capa oscura */
+  background-color: rgba(0, 0, 0, 0.111);
   position: fixed;
   top: 0;
   left: 0;
@@ -20,27 +21,29 @@ body {
   z-index: -1;
 }
 
-/* NAV como barra superior */
+/* NAV */
 nav {
   position: fixed;
   top: 0;
-  width: 96%;
+  width: 94%;
   background-color: rgba(0, 38, 77, 0.9);
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 3px 40px;
+  padding: 10px 5%;
   z-index: 1000;
 }
 
+/* Menú */
 .menu ul {
   display: flex;
-  gap: 70px;
+  flex-wrap: wrap;
+  gap: 30px;
   list-style: none;
   margin: 0;
   padding: 0;
 }
-
 
 /* Enlaces */
 nav a {
@@ -55,14 +58,14 @@ nav a:hover {
   border-radius: 4px;
 }
 
-/* Contenedor circular */
-.search  {
+/* Search */
+.search {
   background-color: #ffffff;
   border-radius: 13px;
   padding: 6px;
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
@@ -71,30 +74,100 @@ nav input[type="text"] {
   padding: 5px;
   border: none;
   border-radius: 13px;
-  width: 250px;
+  width: 200px;
 }
 
 /* Botones */
 nav button {
-  padding: 7px 12px;
+  padding: 7px 14px;
   border: none;
   border-radius: 13px;
   background-color: #0077cc;
-  color: rgb(255, 255, 255);
+  color: #ffffff;
   cursor: pointer;
 }
 
 nav button:hover {
   background-color: #3485d5;
 }
-@media (max-width: 900px) {
-  .aboutContainer {
+
+/* Sección de bienvenida */
+.beginningMainPage {
+  display: flex;
+}
+
+.mainPageInfo {
+  max-width: 700px;
+  margin-top: 300px;
+  margin-left: 280px;
+  color: #ffffff;
+}
+
+.mainPageInfo h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+
+}
+
+.mainPageInfo p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #ffffff;
+}
+
+.mainPageInfo button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #0077cc;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  nav {
     flex-direction: column;
-    padding: 30px 20px;
+    align-items: flex-start;
+    padding: 10px 20px;
   }
 
-  .aboutOurContent,
-  .aboutOurTeam {
-    max-width: 100%;
+  .menu ul {
+    flex-direction: column;
+    gap: 10px;
   }
+
+  .search {
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  nav input[type="text"] {
+    width: 100%;
+  }
+  .beginningMainPage {
+    justify-content: center;
+    padding: 100px 20px 40px 20px;
+    text-align: center;
+  }
+
+  .mainPageInfo {
+    margin: 0 auto;
+  }
+
+  .mainPageInfo h1 {
+    font-size: 28px;
+  }
+
+  .mainPageInfo p {
+    font-size: 16px;
+  }
+
 }
+
+
+
+
+

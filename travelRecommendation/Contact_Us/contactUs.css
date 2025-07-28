@@ -8,6 +8,7 @@
   box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2); /* Sombra sutil oscura */
   color: white;
 }
+
 .formularioContact h1 {
   text-align: center;
   margin-bottom: 25px;
@@ -22,6 +23,7 @@
 }
 
 /* Inputs y textarea */
+
 .formularioContact input,
 .formularioContact textarea {
   width: 100%;

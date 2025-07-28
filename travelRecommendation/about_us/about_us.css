@@ -1,5 +1,7 @@
 body {
   margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
   color: #ffffff;
   line-height: 1.7;
 }
@@ -11,6 +13,15 @@ body {
   gap: 40px;
   padding: 115px;
   flex-wrap: wrap; /* para que se apilen en móvil */
+}
+.overlay {
+  background-color: rgba(0, 0, 0, 0.111); /* Capa oscura */
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
 }
 
 .aboutOurContent,
@@ -70,16 +81,4 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Responsive (móvil o pantallas pequeñas) */
-@media (max-width: 900px) {
-  .aboutContainer {
-    flex-direction: column;
-    padding: 30px 20px;
-  }
-
-  .aboutOurContent,
-  .aboutOurTeam {
-    max-width: 100%;
-  }
-}
 
