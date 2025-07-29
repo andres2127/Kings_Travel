@@ -1,12 +1,13 @@
 /* Estilos para el formulario */
 .formularioContact {
   max-width: 600px;
-  margin: 100px auto;
-  padding: 50px 70px;
+  margin:  100px auto;
+  padding: 30px 50px;
   background-color: rgba(0, 38, 77, 0.6);
   border-radius: 15px;
-  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2); /* Sombra sutil oscura */
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
   color: white;
+  box-sizing: border-box;
 }
 
 .formularioContact h1 {
@@ -23,7 +24,6 @@
 }
 
 /* Inputs y textarea */
-
 .formularioContact input,
 .formularioContact textarea {
   width: 100%;
@@ -32,6 +32,7 @@
   border: none;
   font-size: 16px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
 }
 
 /* Botón */
@@ -51,9 +52,38 @@
 .formularioContact button:hover {
   background-color: #005fa3;
 }
+
+/* Mensaje de confirmación */
 #confirmationMessage {
   margin-top: 30px;
   color: #2ecc71;
   font-size: 16px;
   animation: fadeIn 0.5s ease-in;
+}
+
+/* Animación */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .formularioContact {
+    margin: 60px 20px;
+    padding: 30px 20px;
+  }
+
+  .formularioContact h1 {
+    font-size: 24px;
+  }
+
+  .formularioContact input,
+  .formularioContact textarea {
+    font-size: 14px;
+  }
+
+  .formularioContact button {
+    font-size: 15px;
+  }
 }

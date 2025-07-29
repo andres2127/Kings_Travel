@@ -4,38 +4,34 @@ body {
   background-color: #f8f9fa;
   color: #ffffff;
   line-height: 1.7;
+  font-family: Arial, sans-serif;
 }
 
+/* Contenedor principal */
 .aboutContainer {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   gap: 40px;
-  padding: 115px;
-  flex-wrap: wrap; /* para que se apilen en móvil */
-}
-.overlay {
-  background-color: rgba(0, 0, 0, 0.111); /* Capa oscura */
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100vw;
-  z-index: -1;
+  padding: 100px 60px; /* padding más flexible */
+  flex-wrap: wrap; /* Permite apilar elementos en pantallas pequeñas */
 }
 
+
+/* Secciones About */
 .aboutOurContent,
 .aboutOurTeam {
-  flex: 1 1 400px; /* crece y ocupa como mínimo 400px */
+  flex: 1 1 400px;
   background-color: rgba(0, 38, 77, 0.6);
   padding: 30px;
   border-radius: 15px;
-  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2); /* Sombra sutil oscura */
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
   animation: fadeIn 1s ease-in;
   max-width: 600px;
+  box-sizing: border-box;
 }
 
-/* Títulos */
+/* Títulos principales */
 .aboutOurContent h1,
 .aboutOurTeam h1 {
   text-align: center;
@@ -44,26 +40,25 @@ body {
   margin-bottom: 20px;
 }
 
-/* Títulos de miembros */
+/* Subtítulos (miembros del equipo) */
 .aboutOurTeam h3 {
   margin-top: 25px;
   margin-bottom: 10px;
   background-color: #81d4fa;
   color: #ffffff;
   font-size: 20px;
-  padding: 10px 10px;
+  padding: 10px;
   border-radius: 15px;
-
 }
 
+/* Párrafos */
 .aboutOurContent p,
 .aboutOurTeam p {
   font-size: 16px;
   margin-bottom: 16px;
 }
 
-
-/* Lista de destinos */
+/* Lista con íconos */
 .aboutOurContent ul {
   padding-left: 20px;
   margin-bottom: 20px;
@@ -81,4 +76,42 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* 🔽 RESPONSIVE: Para tablets y móviles */
+@media (max-width: 1024px) {
+  .aboutContainer {
+    padding: 80px 30px;
+  }
 
+  .aboutOurContent,
+  .aboutOurTeam {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .aboutContainer {
+    padding: 60px 15px;
+    flex-direction: column;
+  }
+
+  .aboutOurContent,
+  .aboutOurTeam {
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .aboutOurContent h1,
+  .aboutOurTeam h1 {
+    font-size: 24px;
+  }
+
+  .aboutOurTeam h3 {
+    font-size: 18px;
+  }
+
+  .aboutOurContent p,
+  .aboutOurTeam p,
+  .aboutOurContent ul li {
+    font-size: 15px;
+  }
+}
