@@ -28,6 +28,19 @@ if (contactForm) {
   });
 }
 
+// Limpiar el campo de búsqueda y los resultados
+document.getElementById('clearButton').addEventListener('click', function () {
+  // Limpiar el campo de búsqueda
+  document.getElementById('searchInput').value = '';
+
+  // Limpiar los resultados anteriores
+  const container = document.getElementById('travelRecommendations');
+  if (container) {
+    container.innerHTML = '';
+  }
+});
+
+
 // Función para mostrar elementos que coincidan con el texto buscado
 function matchAndRender(array, searchInput, container) {
   let foundSomething = false;
