@@ -2,7 +2,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-image: url("Images/Imagen de fondo.png");
+  background-image: url("../docs/Images/Imagen\ de\ fondo.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
