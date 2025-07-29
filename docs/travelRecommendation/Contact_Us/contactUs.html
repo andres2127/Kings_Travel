@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Kings Travel</title>
+        <link rel="icon" type="image/png" href="../Images/LogoPagina.png">
+        <link rel="stylesheet" href="../styles.css">
+        <link rel="stylesheet" href="../Contact_Us/contactUs.css">
+    </head>
+    <body>
+        <nav>
+            <div class="logo">
+                <img src="../Images/ChatGPT Image 26 jul.png" alt="Kings Travel Logo" style="height: 50px;">
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="../travel_recommendation.html">Home</a></li>
+                    <li><a href="../about_us/about_us.html">About Us</a></li>
+                    <li><a href="../Contact_Us/contactUs.html">Contact Us</a></li>
+                </ul>
+            </div> 
+        </nav>
+        <div class="overlay"></div>
+        <div class="formularioContact">
+            <h1>Contact Us</h1>
+            <form id="formularioContacto" action="" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Send</button>
+                <p id="confirmationMessage" style="display:none; color: rgb(255, 255, 255); font-weight: bold;"></p>
+            </form>
+        </div>
+        <script src="../travel_recommendation.js"></script>
+    </body>
+</html>
